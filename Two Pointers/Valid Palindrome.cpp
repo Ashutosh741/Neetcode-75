@@ -23,3 +23,24 @@ public:
         else return false;
     }
 };
+
+
+// optimal approach
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
+        int i = 0, j = s.length()-1;
+        int n = s.length();
+        while(i < j){
+            while(i< j && !iswalnum(s[i]))i++;
+            while(j>0 && !iswalnum(s[j]))j--;
+            if(iswalnum(s[j]) && iswalnum(s[i])){
+            if(tolower(s[i]) != tolower(s[j]))return false;
+            }
+            i++,j--;
+        }
+        return true;
+
+    }
+};
