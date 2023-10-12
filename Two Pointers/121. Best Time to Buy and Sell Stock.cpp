@@ -13,3 +13,5 @@ public:
 
     }
 };
+
+// don't know why, its taking too much time, if i don't replace n with prices.size()
